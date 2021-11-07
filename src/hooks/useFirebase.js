@@ -83,7 +83,7 @@ const useFirebase = _ => {
     }
 
     useEffect(_ => {
-        fetch(`http://localhost:5000/users/${user.email}`)
+        fetch(`https://thawing-stream-21692.herokuapp.com/users/${user.email}`)
             .then(res => res.json())
             .then(data => {
                 setAdmin(data.admin)
@@ -92,7 +92,7 @@ const useFirebase = _ => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch(`http://localhost:5000/users`, {
+        fetch(`https://thawing-stream-21692.herokuapp.com/users`, {
             method: method,
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(user)

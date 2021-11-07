@@ -39,7 +39,7 @@ const BookingModal = ({ openBooking, handleBookingClose, booking, date, setBooki
             date: date.toLocaleDateString()
         }
         // Send to the server
-        fetch('http://localhost:5000/appointments', {
+        fetch('https://thawing-stream-21692.herokuapp.com/appointments', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(appointment)
