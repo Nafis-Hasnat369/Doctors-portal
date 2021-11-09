@@ -12,7 +12,7 @@ const Appointments = ({ date }) => {
     const { user, token } = useAuth();
     const [appointments, setAppointments] = useState();
     useEffect(_ => {
-        fetch(`https://thawing-stream-21692.herokuapp.com/appointments?email=${user.email}&date=${date}`, {
+        fetch(`https://thawing-stream-21692.herokuapp.com/appointments?email=${user.email}&date=${date.toLocaleDateString()}`, {
             headers: {
                 "authorization": `Bearer ${token}`
             }
